@@ -581,6 +581,16 @@
 		#size-cells = <2>;
 		ranges;
 
+	ramoops@bff00000 {
+		compatible = "ramoops";
+		reg = <0x0 0xbff00000 0x0 0x100000>; // Total: 1 MB
+
+		record-size = <0x20000>;  // 128 KB
+		console-size = <0x20000>; // 128 KB
+		ftrace-size = <0x20000>;  // 128 KB
+		pmsg-size = <0x20000>;    // 128 KB
+	};
+
 		hyp_mem: hyp_mem@85700000 {
 			no-map;
 			reg = <0x0 0x85700000 0x0 0x600000>;
