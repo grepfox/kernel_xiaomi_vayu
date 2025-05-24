@@ -7,7 +7,7 @@ builddir="${kernel_dir}/build"
 ZIMAGE=$kernel_dir/out/arch/arm64/boot/Image
 TC_DIR=$HOME/tc
 CLANG_DIR=$HOME/tc/clang-r522817
-export CONFIG_FILE="vayu_defconfig"
+export CONFIG_FILE="ignited_defconfig"
 export ARCH="arm64"
 export KBUILD_BUILD_HOST=resona
 export KBUILD_BUILD_USER=root
@@ -30,8 +30,8 @@ LGR='\033[1;32m'
 
 if [ "$VAYU_CONFIG_REGEN" = "true" ]; then
     echo -e ${LGR} "Regenerating defconfig"
-    make ARCH=arm64 O=out vayu_defconfig
-    cp out/.config arch/arm64/configs/vayu_defconfig
+    make ARCH=arm64 O=out ignited_defconfig
+    cp out/.config arch/arm64/configs/ignited_defconfig
 else
     echo  -e ${RED} "Not regenerating config"
 fi
