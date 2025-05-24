@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 kernel_dir="${PWD}"
 CCACHE=$(command -v ccache)
 objdir="${kernel_dir}/out"
@@ -6,7 +7,7 @@ anykernel=$HOME/anykernel
 builddir="${kernel_dir}/build"
 ZIMAGE=$kernel_dir/out/arch/arm64/boot/Image
 TC_DIR=$HOME/tc
-CLANG_DIR=$HOME/tc/clang-r522817
+CLANG_DIR=$HOME/lineage/prebuilts/clang/host/linux-x86/clang-r522817
 export CONFIG_FILE="ignited_defconfig"
 export ARCH="arm64"
 export KBUILD_BUILD_HOST=resona
